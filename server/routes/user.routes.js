@@ -11,10 +11,12 @@ userRouter.get('/alluser', userControllers.getAllUser);
 userRouter.get("/:userId", userControllers.getUserById);
 
 // create new user
-userControllers.post('/register', userControllers.registerUser);
+userRouter.post('/register', userControllers.registerUser);
 
 //login the user
-userControllers.post('/login', userControllers.loginUser);
+userRouter.post('/login', userControllers.loginUser);
 
 //reset the password
-userControllers.patch('/resetpassword', userControllers.resetPassword);
+userRouter.patch('/resetpassword', userControllers.resetPassword);
+
+module.exports=userRouter
