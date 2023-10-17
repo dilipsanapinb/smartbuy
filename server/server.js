@@ -17,7 +17,7 @@ app.use('/user', userRouter);
 app.listen(PORT, async () => {
     try {
         await connection;
-        // await DefaultData();
+        await DefaultData();
         console.log("Server is connected to DB");
     } catch (error) {
         console.log(`Error in connecting to DB:${error}`);
